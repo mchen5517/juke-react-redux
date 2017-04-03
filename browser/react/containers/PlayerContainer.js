@@ -59,13 +59,13 @@ import {connect} from 'react-redux';
 // export default PlayerContainer;
 
 export default connect(
-  state => {
+  state => ({
     currentSong: state.player.currentSong,
     isPlaying: state.player.isPlaying
-  },
-  dispatch => {
+  }),
+  dispatch => ({
     next: () => dispatch(next()),
     prev: () => dispatch(prev()),
     toggle: (song, list) => dispatch(toggleSong(song, list))
-  }
+  })
   )(Player);

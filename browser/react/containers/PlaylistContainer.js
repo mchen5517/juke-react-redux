@@ -41,7 +41,7 @@ import {connect} from 'react-redux';
 
 export default connect(state => {
   return {
-    selectedPlaylist={state.playlists.selected}
+    selectedPlaylist: state.playlists.selected,
     currentSong: state.player.currentSong,
     isPlaying: state.player.isPlaying
   }
