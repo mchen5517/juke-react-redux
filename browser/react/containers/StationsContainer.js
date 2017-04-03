@@ -16,10 +16,8 @@ const mapStateToProps = function(state){
   };
 }
 
-const mapDispatchToProps = function(dispatch){
-  return {};
-}
-
-const StationsContainer = connect(mapStateToProps, mapDispatchToProps)(Stations);
+const StationsContainer = connect(
+  state => ({stations: convertSongsToStations(state.songs)})
+)(Stations);
 
 export default StationsContainer;
