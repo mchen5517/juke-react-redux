@@ -62,7 +62,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={App} onEnter={onAppEnter}>
-        <Route path="/albums" component={AlbumsContainer}/>
+        <Route path="/albums" component={AlbumsContainer} />
         <Route path="/albums/:albumId" component={AlbumContainer} onEnter={onAlbumEnter}/>
         <Route path="/artists" component={FilterableArtistsContainer}/>
         <Route path="/artists/:artistId" component={ArtistContainer} onEnter={onArtistEnter}>

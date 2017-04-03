@@ -32,3 +32,11 @@ export default function Player (props) {
     </footer>
   );
 };
+
+
+//   componentDidMount() {
+
+//     AUDIO.addEventListener('ended', this.next);
+//     AUDIO.addEventListener('timeupdate', () => {
+//       store.dispatch(setProgress(AUDIO.currentTime / AUDIO.duration));
+//     });
