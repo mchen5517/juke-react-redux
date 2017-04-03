@@ -10,11 +10,13 @@ import NewPlaylistContainer from './containers/NewPlaylistContainer';
 import PlaylistContainer from './containers/PlaylistContainer';
 import LyricsContainer from './containers/LyricsContainer';
 import StationsContainer from './containers/StationsContainer';
+import StationContainer from './containers/StationContainer';
 
 import App from './components/App';
 import Albums from './components/Albums';
 import Songs from './components/Songs';
 import Stations from './components/Stations';
+import Station from './components/Station';
 
 import axios from 'axios';
 import store from './store';
@@ -26,7 +28,7 @@ import {Provider} from 'react-redux';
 
 const onAppEnter = function () {
 
-  Promise.all([ 
+  Promise.all([
     axios.get('/api/albums'),
     axios.get('/api/artists'),
     axios.get('/api/playlists')
@@ -71,6 +73,7 @@ ReactDOM.render(
         <Route path="/playlists/:playlistId" component={PlaylistContainer} onEnter={onPlaylistEnter}/>
         <Route path="/lyrics" component={LyricsContainer} />
         <Route path="/stations" onEnter={onStationEnter} component={StationsContainer} />
+        <Route path='/stations/:genreName' onEnter={onStationEnter} component={StationContainer} />
         <IndexRedirect to="/albums"/>
       </Route>
     </Router>
