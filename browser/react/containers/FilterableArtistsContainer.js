@@ -52,3 +52,16 @@ class FilterableArtistsContainer extends React.Component {
 }
 
 export default FilterableArtistsContainer;
+
+// export default connect(
+//   )(() => {
+//     return (
+//       <div>
+//         <FilterInput
+//           handleChange={this.handleChange}
+//           inputValue={inputValue}
+//         />
+//         <Artists artists={filteredArtists}/>
+//       </div>
+//     );
+// })
